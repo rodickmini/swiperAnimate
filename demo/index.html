@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,23 +63,23 @@
       <div class="swiper-slide" style="background-color: #aaa;">
         <div class="ele ele-1 ani" swiper-animate-effect="fadeInRight, fadeInLeft, fadeInUp" swiper-animate-duration="3s, 1s, 3s"
           swiper-animate-delay="0s, 0s, 1s" swiper-animation-iteration-count="1, 2, 2"></div>
-        <!-- <div class="ele ele-4 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s"></div> -->
+        <div class="ele ele-4 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="2s"></div>
       </div>
-      <!-- <div class="swiper-slide" style="background-color: #ccc;">
-                <div class="ele ele-2 ani" swiper-animate-effect="fadeInLeft, fadeInUp" swiper-animate-duration="1s, 1s" swiper-animate-delay="0s, 0s" swiper-animation-iteration-count="1, 1"></div>
-                <div class="ele ele-4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animation-iteration-count="1"></div>
-            </div>
-            <div class="swiper-slide" style="background-color: #666;">
-                <div class="ele ele-3 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s" swiper-animation-iteration-count="1"></div>
-                <div class="ele ele-2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s" swiper-animation-iteration-count="1"></div>
-            </div> -->
+      <div class="swiper-slide" style="background-color: #ccc;">
+        <div class="ele ele-2 ani" swiper-animate-effect="fadeInLeft, fadeInUp" swiper-animate-duration="1s, 1s" swiper-animate-delay="0s, 0s"
+          swiper-animation-iteration-count="1, 1"></div>
+        <div class="ele ele-4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0s" swiper-animation-iteration-count="1"></div>
+      </div>
+      <div class="swiper-slide" style="background-color: #666;">
+        <div class="ele ele-3 ani" swiper-animate-effect="slideInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s" swiper-animation-iteration-count="1"></div>
+        <div class="ele ele-2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s" swiper-animation-iteration-count="1"></div>
+      </div>
     </div>
   </div>
   <script src="https://cdn.bootcss.com/Swiper/4.2.0/js/swiper.min.js"></script>
   <script src="../src/swiper-animate.js"></script>
   <script>
     var sa = new SwiperAnimate();
-    console.log(sa);
     var mySwiper = new Swiper('.swiper-container', {
       direction: 'vertical',
       effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
