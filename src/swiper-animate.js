@@ -13,8 +13,8 @@ window.SwiperAnimate = class SwiperAnimate {
   }
 
   swiperAnimate(swiper) {
-    this._clearSwiperAnimate();
-    let element = swiper.slides[swiper.activeIndex].querySelectorAll(".ani")
+    this._clearSwiperAnimate()
+    let element = swiper ? swiper.slides[swiper.activeIndex].querySelectorAll(".ani") : window.document.documentElement.querySelectorAll(".ani")
     for (let i = 0; i < element.length; i++) {
       let effect, duration, delay, iterationCount
       effect = element[i].attributes["swiper-animate-effect"] ? element[i].attributes["swiper-animate-effect"].value : ""
@@ -26,9 +26,9 @@ window.SwiperAnimate = class SwiperAnimate {
 
       let self = this
       for (let j = 0; j < aniVector.length; j++) {
-        (function (i, j, aniVector) {
+        ;(function (i, j, aniVector) {
           let handler = setTimeout(function () {
-            self._clearEleAnimate(element[i], j > 0 ? aniVector[j - 1].effect : '');
+            self._clearEleAnimate(element[i], j > 0 ? aniVector[j - 1].effect : '')
             self._addAniStyle(element[i], aniVector[j].effect, aniVector[j].duration, 0, aniVector[j].iterationCount)
           }, aniVector[j].delay)
           self._handlerArr.push(handler)
